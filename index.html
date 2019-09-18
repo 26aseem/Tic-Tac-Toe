@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        
+        <div id="head">
+            <h1>Welcome Aboard!</h1>
+            <h1>Let us a play a game of Tic Tac Toe</h1>
+            <input type="radio" name="player1" value="X"> X <br>
+            <input type="radio" name="player1" value="O"> O <br>
+        </div>
+
+        <table>
+            <tr>
+                <td></td>
+                <td class="b1"></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td class="b2"></td>
+                <td class="b1 b2"></td>
+                <td class="b2"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td class="b1"></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <div id="foot">
+            
+        </div>
+
+        <script>
+            var count = 0;
+            $('td').on("click",function(){
+                count = count + 1;
+                if(count%2==1)
+                    $(this).text($("input[name='player1']:checked").val());
+                else    
+                    $(this).text($("input[name='player1']:not(:checked)").val());
+        
+        });
+
+        </script>
+
+    </body>
+</html>
