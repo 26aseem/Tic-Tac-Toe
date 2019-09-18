@@ -47,13 +47,10 @@
                     $(this).text($("input[name='player1']:not(:checked)").val());
 
                 if($('#a1').text() == $('#a2').text() && $('#a1').text() == $('#a3').text() && $('#a1').text() != ""){
-                    alert('b');
-                    $('a1').text().fadeOut(500);
-                    $('a2').text().fadeOut(500);
-                    $('a3').text().fadeOut(500);
-                    $('a1').text().fadeIn(500);
-                    $('a2').text().fadeIn(500);
-                    $('a3').text().fadeIn(500);
+                    $('#a1').css(backgroun-color:'red');
+                    $('#a2').css(background-color='red');
+                    $('#a3').css(background-color='red');
+                  
                 }
 
                 else if($('#a4').text() == $('#a5').text() && $('#a4').text() == $('#a6').text() && $('#a4').text() != ""){
