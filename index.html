@@ -13,7 +13,8 @@
             <input type="radio" name="player1" value="X" checked="checked"> X <br>
             <input type="radio" name="player1" value="O"> O <br>
             <h1 id = "announcement"></h1>
-            <button id = "rt"> New Game </button>
+            <button id = "rt"> Reset Game </button>
+            <button id = "new"> New Game </button>
         </div>
 
         <table>
@@ -41,7 +42,12 @@
         </div>
 
         <script>
-            $('#rt').hide();
+
+            $('#rt').click(function(){
+                location.reload(true);
+            });
+
+            $('#new').hide();
             var count = 0;
             var win = 0;
             var winner = 0;
@@ -125,11 +131,11 @@
                         $('td').text("");
                         $('#announcement').text(row);
 
-                        $('#rt').click(function(){
+                        $('#new').click(function(){
                             location.reload(true);
                         });
 
-                        $('#rt').show();
+                        $('#new').show();
                     }
 
         
