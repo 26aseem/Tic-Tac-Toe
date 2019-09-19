@@ -123,6 +123,11 @@
                         row = row.concat($(winner).text());
                         $('td').text("");
                         $('#announcement').text(row);
+
+                        $('#rt').click(function(){
+                            location.reload(true);
+                        });
+
                         $('#rt').show();
                     }
 
